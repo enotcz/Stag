@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1070.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.FXMLDocumentAnonymController">
+  <tabs>
+    <Tab fx:id="tabVyucuici" onSelectionChanged="#tabVyucuiciSelect" text="Vyučujici">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="478.0" prefWidth="671.0">
+               <children>
+                  <ListView fx:id="lvUcitSeznam" layoutX="9.0" layoutY="32.0" prefHeight="171.0" prefWidth="773.0" />
+                  <Label layoutX="800.0" layoutY="167.0" text="ID:" />
+                  <Label layoutX="800.0" layoutY="317.0" text="Katedra" />
+                  <Label layoutX="800.0" layoutY="227.0" text="Jmeno:" />
+                  <Label layoutX="800.0" layoutY="347.0" text="Telefon:" />
+                  <Label layoutX="800.0" layoutY="377.0" text="Email:" />
+                  <Label layoutX="800.0" layoutY="407.0" text="Mobil:" />
+                  <TextField fx:id="tfUcitID" editable="false" layoutX="899.0" layoutY="162.0" prefHeight="27.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitPrijmeni" layoutX="899.0" layoutY="252.0" prefHeight="26.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitTelefon" layoutX="899.0" layoutY="342.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitEmail" layoutX="899.0" layoutY="372.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitMobil" layoutX="899.0" layoutY="402.0" prefWidth="160.0" />
+                  <ListView fx:id="lvUcitListGarant" layoutX="10.0" layoutY="250.0" prefHeight="300.0" prefWidth="180.0" />
+                  <Label layoutX="800.0" layoutY="257.0" text="Prijmeni:" />
+                  <Label layoutX="800.0" layoutY="197.0" text="Titul pred:" />
+                  <Label layoutX="800.0" layoutY="287.0" text="Titul za:" />
+                  <TextField fx:id="tfUcitTitulPred" layoutX="899.0" layoutY="192.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitJmeno" layoutX="899.0" layoutY="222.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitTitulZa" layoutX="899.0" layoutY="282.0" prefWidth="160.0" />
+                  <Label layoutX="9.0" layoutY="14.0" text="Seznam vyucujicich:" />
+                  <Label layoutX="18.0" layoutY="231.0" text="Garant:" />
+                  <ListView fx:id="lvUcitListPrednas" layoutX="190.0" layoutY="250.0" prefHeight="300.0" prefWidth="180.0" />
+                  <ListView fx:id="lvUcitListCvic" layoutX="370.0" layoutY="250.0" prefHeight="301.0" prefWidth="180.0" />
+                  <ListView fx:id="lvUcitListSem" layoutX="550.0" layoutY="250.0" prefHeight="301.0" prefWidth="180.0" />
+                  <Label layoutX="203.0" layoutY="231.0" text="Prednaši:" />
+                  <Label layoutX="379.0" layoutY="231.0" text="Cviči:" />
+                  <Label layoutX="564.0" layoutY="231.0" text="Vede seminar:" />
+                  <ImageView fx:id="imgUcitFoto" fitHeight="143.0" fitWidth="141.0" layoutX="901.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="800.0" layoutY="437.0" text="Administrator:" />
+                  <TextField fx:id="tfUcitKatedra" layoutX="899.0" layoutY="313.0" prefWidth="160.0" />
+                  <TextField fx:id="tfUcitAdministrator" layoutX="899.0" layoutY="433.0" prefWidth="160.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tabKatedra" onSelectionChanged="#tabKatedraSelected" text="Katedra">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvPracList" layoutX="9.0" layoutY="32.0" prefHeight="444.0" prefWidth="560.0" />
+                  <Label layoutX="9.0" layoutY="14.0" text="Seznam pracovist:" />
+                  <Label layoutX="590.0" layoutY="30.0" text="ID:" />
+                  <Label layoutX="590.0" layoutY="90.0" text="Fakulta:" />
+                  <TextField fx:id="tfPracID" layoutX="701.0" layoutY="25.0" prefHeight="27.0" prefWidth="160.0" />
+                  <Label layoutX="590.0" layoutY="60.0" text="Nazev:" />
+                  <TextField fx:id="tfPracNazev" layoutX="701.0" layoutY="55.0" prefHeight="27.0" prefWidth="160.0" />
+                  <TextField fx:id="tfPracFakulta" layoutX="701.0" layoutY="85.0" prefHeight="27.0" prefWidth="160.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabPredmety" onSelectionChanged="#tabPredmetySelected" text="Predmety">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="490.0" prefWidth="588.0">
+               <children>
+                  <ListView fx:id="lvPredList" layoutX="10.0" layoutY="32.0" prefHeight="159.0" prefWidth="542.0" />
+                  <Label layoutX="10.0" layoutY="14.0" text="Seznam predmetu:" />
+                  <Label layoutX="580.0" layoutY="56.0" text="Nazev:" />
+                  <Label layoutX="580.0" layoutY="26.0" text="Zkratka:" />
+                  <Label layoutX="580.0" layoutY="116.0" text="Zpusob vyuki:" />
+                  <Label layoutX="610.0" layoutY="146.0" text="Prednaska(h):" />
+                  <Label layoutX="610.0" layoutY="176.0" text="Cviceni(h):" />
+                  <Label layoutX="610.0" layoutY="206.0" text="Seminar(h):" />
+                  <Label layoutX="580.0" layoutY="266.0" text="Zimni semestr:" />
+                  <Label layoutX="581.0" layoutY="328.0" text="Zpusob zakonceni:" />
+                  <Label layoutX="581.0" layoutY="357.0" text="Doporuceny rocnik:" />
+                  <TextField fx:id="tfPredZkratka" layoutX="700.0" layoutY="21.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredNazev" layoutX="700.0" layoutY="51.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredDopRocnik" layoutX="701.0" layoutY="352.0" prefWidth="150.0" />
+                  <Label layoutX="581.0" layoutY="387.0" text="Garant:" />
+                  <ListView fx:id="lvPredListPredn" layoutX="10.0" layoutY="216.0" prefHeight="84.0" prefWidth="542.0" />
+                  <Label layoutX="10.0" layoutY="197.0" text="Seznam prednasicich:" />
+                  <Label layoutX="9.0" layoutY="305.0" text="Seznam cvicicich:" />
+                  <ListView fx:id="lvPredListCvic" layoutX="12.0" layoutY="325.0" prefHeight="103.0" prefWidth="541.0" />
+                  <TextArea fx:id="tfPredPopis" layoutX="861.0" layoutY="48.0" prefHeight="360.0" prefWidth="200.0" wrapText="true" />
+                  <ListView fx:id="lvPredListSem" layoutX="10.0" layoutY="457.0" prefHeight="94.0" prefWidth="542.0" />
+                  <Label layoutX="580.0" layoutY="296.0" text="Letni semestr:" />
+                  <TextField fx:id="tfPredPocetKred" layoutX="700.0" layoutY="231.0" prefHeight="27.0" prefWidth="150.0" />
+                  <Label layoutX="580.0" layoutY="236.0" text="Pocet kreditu:" />
+                  <Label layoutX="580.0" layoutY="83.0" text="Katedra:" />
+                  <Label layoutX="861.0" layoutY="26.0" text="Popis:" />
+                  <Label layoutX="11.0" layoutY="432.0" text="Seznam vedoucich seminar:" />
+                  <TextField fx:id="tfPredKatedra" layoutX="700.0" layoutY="79.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredPrednas" layoutX="700.0" layoutY="142.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredCvic" layoutX="700.0" layoutY="172.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredSem" layoutX="700.0" layoutY="202.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredZimSem" layoutX="700.0" layoutY="262.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredLetSem" layoutX="700.0" layoutY="293.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredZpusZak" layoutX="700.0" layoutY="324.0" prefWidth="150.0" />
+                  <TextField fx:id="tfPredGarant" layoutX="701.0" layoutY="383.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab fx:id="tabStudenti" onSelectionChanged="#tabStudentiSelected" text="Studenti">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvStudList" layoutX="14.0" layoutY="44.0" prefHeight="504.0" prefWidth="561.0" />
+                  <Label layoutX="603.0" layoutY="211.0" prefHeight="27.0" prefWidth="80.0" text="Jmeno:" />
+                  <Label layoutX="603.0" layoutY="241.0" prefHeight="27.0" prefWidth="80.0" text="Prijmeni:" />
+                  <Label layoutX="603.0" layoutY="181.0" prefHeight="27.0" prefWidth="80.0" text="NetID:" />
+                  <Label layoutX="603.0" layoutY="271.0" prefHeight="27.0" prefWidth="80.0" text="Rocnik:" />
+                  <TextField fx:id="tfStudNetID" editable="false" layoutX="683.0" layoutY="181.0" />
+                  <TextField fx:id="tfStudJmeno" layoutX="683.0" layoutY="211.0" />
+                  <TextField fx:id="tfStudPrijmeni" layoutX="683.0" layoutY="241.0" />
+                  <TextField fx:id="tfStudRocnik" layoutX="683.0" layoutY="271.0" prefHeight="27.0" prefWidth="25.0" />
+                  <Label layoutX="603.0" layoutY="301.0" prefHeight="27.0" prefWidth="80.0" text="Obor:" />
+                  <Label layoutX="20.0" layoutY="21.0" text="Seznam studentu:" />
+                  <ImageView fx:id="imgStudFoto" fitHeight="137.0" fitWidth="120.0" layoutX="710.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="tfStudObor" layoutX="683.0" layoutY="302.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="tabObory" onSelectionChanged="#tabOborySelected" text="Obory">
+        <content>
+          <AnchorPane layoutX="9.0" layoutY="32.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvOboryList" layoutX="9.0" layoutY="32.0" prefHeight="519.0" prefWidth="591.0" />
+                  <Label layoutX="621.0" layoutY="38.0" text="ID:" />
+                  <Label layoutX="621.0" layoutY="68.0" text="Nazev:" />
+                  <Label layoutX="621.0" layoutY="98.0" text="Zkratka:" />
+                  <Label layoutX="621.0" layoutY="128.0" text="Akreditace od:" />
+                  <Label layoutX="621.0" layoutY="158.0" text="Akreditace do:" />
+                  <Label layoutX="621.0" layoutY="188.0" text="Forma studia:" />
+                  <Label layoutX="621.0" layoutY="218.0" text="Jazyk:" />
+                  <TextField fx:id="tfOboryID" editable="false" layoutX="711.0" layoutY="33.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryNazev" layoutX="711.0" layoutY="63.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryZkratka" layoutX="711.0" layoutY="93.0" prefWidth="150.0" />
+                  <Label layoutX="621.0" layoutY="248.0" text="Typ studia:" />
+                  <Label layoutX="13.0" layoutY="15.0" text="Seznam oboru:" />
+                  <TextField fx:id="tfOboryAkrOd" layoutX="711.0" layoutY="124.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryAkrDo" layoutX="711.0" layoutY="154.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryForma" layoutX="711.0" layoutY="184.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryJazyk" layoutX="711.0" layoutY="214.0" prefWidth="150.0" />
+                  <TextField fx:id="tfOboryTypStud" layoutX="711.0" layoutY="244.0" prefWidth="150.0" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Studijni Plan">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvStudPlanObor" layoutX="14.0" layoutY="26.0" prefHeight="236.0" prefWidth="326.0" />
+                  <ListView fx:id="lvStudPlanPlan" layoutX="356.0" layoutY="26.0" prefHeight="236.0" prefWidth="447.0" />
+                  <Label layoutX="14.0" layoutY="6.0" text="Obor:" />
+                  <Label layoutX="356.0" layoutY="6.0" text="Studijni plan:" />
+                  <TextField fx:id="tfStudPlanId" layoutX="907.0" layoutY="26.0" />
+                  <Label layoutX="819.0" layoutY="30.0" text="ID:" />
+                  <TextField fx:id="tfStudPlanPocet" layoutX="907.0" layoutY="59.0" />
+                  <Label layoutX="819.0" layoutY="63.0" text="Pocet studentu:" />
+                  <TextField fx:id="tfStudPlanRok" layoutX="907.0" layoutY="94.0" />
+                  <Label layoutX="820.0" layoutY="98.0" text="Rok:" />
+                  <ListView fx:id="lvStudPlanPov" layoutX="17.0" layoutY="323.0" prefHeight="200.0" prefWidth="330.0" />
+                  <ListView fx:id="lvStudPlanPovVol" layoutX="350.0" layoutY="323.0" prefHeight="200.0" prefWidth="330.0" />
+                  <ListView fx:id="lvStudPlanVol" layoutX="683.0" layoutY="323.0" prefHeight="200.0" prefWidth="330.0" />
+                  <Label layoutX="17.0" layoutY="306.0" text="Povinne:" />
+                  <Label layoutX="350.0" layoutY="306.0" text="Povinno-volitelny:" />
+                  <Label layoutX="683.0" layoutY="306.0" text="Volitelny:" />
+                  <Label layoutX="820.0" layoutY="136.0" text="Obor:" />
+                  <TextField fx:id="tfStudPlanObor" layoutX="907.0" layoutY="132.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabFakulta" onSelectionChanged="#tabFakultaSelected" text="Fakulta">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvFakList" layoutX="9.0" layoutY="32.0" prefHeight="520.0" prefWidth="542.0" />
+                  <Label layoutX="590.0" layoutY="35.0" text="Zkratka fakulty:" />
+                  <Label layoutX="590.0" layoutY="65.0" text="Nazev fakulty:" />
+                  <Label layoutX="590.0" layoutY="95.0" text="Dekan" />
+                  <Label layoutX="590.0" layoutY="125.0" text="Mobil:" />
+                  <Label layoutX="590.0" layoutY="155.0" text="Email:" />
+                  <Label layoutX="590.0" layoutY="185.0" text="Telefon:" />
+                  <TextField fx:id="tfFakZkratka" layoutX="700.0" layoutY="30.0" />
+                  <TextField fx:id="tfFakNazev" layoutX="700.0" layoutY="60.0" />
+                  <TextField fx:id="tfFakDekan" layoutX="700.0" layoutY="90.0" />
+                  <TextField fx:id="tfFakMobil" layoutX="700.0" layoutY="120.0" />
+                  <TextField fx:id="tfFakEmail" layoutX="700.0" layoutY="150.0" />
+                  <TextField fx:id="tfFakTelefon" layoutX="700.0" layoutY="180.0" />
+                  <Label layoutX="21.0" layoutY="17.0" text="Seznam fakult:" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabRozvrh" onSelectionChanged="#tabRozvrhSelected" text="Rozvrh">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvRozvrhPredmet" layoutX="22.0" layoutY="35.0" prefHeight="492.0" prefWidth="294.0" />
+                  <ListView fx:id="lvRozvrhAkce" layoutX="337.0" layoutY="34.0" prefHeight="494.0" prefWidth="419.0" />
+                  <Label layoutX="770.0" layoutY="35.0" text="ID:" />
+                  <Label layoutX="770.0" layoutY="65.0" text="Typ" />
+                  <Label layoutX="770.0" layoutY="95.0" text="Čas od:" />
+                  <Label layoutX="770.0" layoutY="125.0" text="Čas do:" />
+                  <Label layoutX="770.0" layoutY="215.0" text="Kapacita:" />
+                  <Label layoutX="770.0" layoutY="155.0" text="Den" />
+                  <Label layoutX="770.0" layoutY="185.0" text="Tyden:" />
+                  <TextField fx:id="tfRozvrhId" editable="false" layoutX="850.0" layoutY="30.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhKapacita" layoutX="850.0" layoutY="210.0" prefWidth="150.0" />
+                  <Label layoutX="770.0" layoutY="245.0" text="Mistnost:" />
+                  <Label layoutX="28.0" layoutY="17.0" text="Seznam predmetu:" />
+                  <Label layoutX="343.0" layoutY="17.0" text="Seznam akce:" />
+                  <Label layoutX="770.0" layoutY="273.0" text="Vyucujici" />
+                  <Label layoutX="772.0" layoutY="304.0" text="Platna:" />
+                  <CheckBox fx:id="chbRozvrhPouzePlatny" layoutX="666.0" layoutY="527.0" mnemonicParsing="false" onAction="#chbRozvrhPouzePlatnyClick" text="Použe platny" />
+                  <Label layoutX="772.0" layoutY="334.0" text="Blokova:" />
+                  <Label layoutX="773.0" layoutY="364.0" text="Datum:" />
+                  <TextField fx:id="tfRozvrhTyp" editable="false" layoutX="850.0" layoutY="60.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhCasOd" editable="false" layoutX="850.0" layoutY="90.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhCasDo" editable="false" layoutX="850.0" layoutY="120.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhDen" editable="false" layoutX="850.0" layoutY="150.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhTyden" editable="false" layoutX="850.0" layoutY="180.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhMistn" editable="false" layoutX="850.0" layoutY="240.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhVyucujici" editable="false" layoutX="850.0" layoutY="270.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhBlokova" editable="false" layoutX="850.0" layoutY="330.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhDatum" editable="false" layoutX="850.0" layoutY="360.0" prefWidth="150.0" />
+                  <TextField fx:id="tfRozvrhIPlatna" editable="false" layoutX="850.0" layoutY="300.0" prefWidth="150.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="tabMistnost" onSelectionChanged="#tabMistnostSelected" text="Mistnost">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="lvMistSeznam" layoutX="14.0" layoutY="33.0" prefHeight="494.0" prefWidth="342.0" />
+                  <Label layoutX="800.0" layoutY="44.0" text="ID:" />
+                  <Label layoutX="800.0" layoutY="74.0" text="Cislo:" />
+                  <Label layoutX="800.0" layoutY="104.0" text="Kapacita:" />
+                  <Label layoutX="800.0" layoutY="134.0" text="Budova:" />
+                  <Label layoutX="800.0" layoutY="164.0" text="Typ:" />
+                  <TextField fx:id="tfMistId" editable="false" layoutX="862.0" layoutY="40.0" />
+                  <TextField fx:id="tfMistCislo" layoutX="862.0" layoutY="70.0" />
+                  <TextField fx:id="tfMistKapacita" layoutX="862.0" layoutY="100.0" />
+                  <ListView fx:id="lvMistObsazenost" layoutX="368.0" layoutY="33.0" prefHeight="494.0" prefWidth="411.0" />
+                  <Label layoutX="14.0" layoutY="16.0" text="Seznam mistnosti:" />
+                  <Label layoutX="368.0" layoutY="16.0" text="Seznam akci:" />
+                  <CheckBox fx:id="chbMistPouzePlatny" layoutX="689.0" layoutY="527.0" mnemonicParsing="false" onAction="#chbMistPouzePlatnyClick" text="Použe platny" />
+                  <TextField fx:id="tfMistBudova" layoutX="862.0" layoutY="130.0" />
+                  <TextField fx:id="tfMistTyp" layoutX="862.0" layoutY="160.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
